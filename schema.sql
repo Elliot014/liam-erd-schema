@@ -1,4 +1,4 @@
--- SOC/SOH Base Schema (ERD-friendly)
+-- SOC/SOH Base Schema (ERD-focus)
 
 -- 1) 資產層：電池/Pack/Cell 基本資料
 CREATE TABLE battery_pack (
