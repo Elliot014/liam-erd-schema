@@ -1,6 +1,6 @@
 -- SOC/SOH Base Schema (ERD-focus)
 
--- 1) 資產層：電池/Pack/Cell 基本資料
+-- 1) 資料層：電池/Pack/Cell
 CREATE TABLE battery_pack (
   pack_id INT,
   pack_code VARCHAR(64),
