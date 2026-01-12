@@ -1,22 +1,20 @@
--- Liam ERD parser-friendly schema (minimal)
-
 CREATE TABLE users (
-  id INT NOT NULL,
-  email VARCHAR(255) NOT NULL,
-  full_name VARCHAR(255) NOT NULL,
+  id INT,
+  email VARCHAR(255),
+  full_name VARCHAR(255),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE organizations (
-  id INT NOT NULL,
-  name VARCHAR(255) NOT NULL,
+  id INT,
+  name VARCHAR(255),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE memberships (
-  id INT NOT NULL,
-  user_id INT NOT NULL,
-  organization_id INT NOT NULL,
+  id INT,
+  user_id INT,
+  organization_id INT,
   role VARCHAR(50),
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES users(id),
@@ -24,18 +22,18 @@ CREATE TABLE memberships (
 );
 
 CREATE TABLE projects (
-  id INT NOT NULL,
-  organization_id INT NOT NULL,
-  name VARCHAR(255) NOT NULL,
+  id INT,
+  organization_id INT,
+  name VARCHAR(255),
   description TEXT,
   PRIMARY KEY (id),
   FOREIGN KEY (organization_id) REFERENCES organizations(id)
 );
 
 CREATE TABLE tasks (
-  id INT NOT NULL,
-  project_id INT NOT NULL,
-  title VARCHAR(255) NOT NULL,
+  id INT,
+  project_id INT,
+  title VARCHAR(255),
   status VARCHAR(30),
   assignee_id INT,
   due_date DATE,
@@ -45,10 +43,10 @@ CREATE TABLE tasks (
 );
 
 CREATE TABLE task_comments (
-  id INT NOT NULL,
-  task_id INT NOT NULL,
-  author_id INT NOT NULL,
-  body TEXT NOT NULL,
+  id INT,
+  task_id INT,
+  author_id INT,
+  body TEXT,
   PRIMARY KEY (id),
   FOREIGN KEY (task_id) REFERENCES tasks(id),
   FOREIGN KEY (author_id) REFERENCES users(id)
