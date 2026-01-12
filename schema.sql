@@ -1,5 +1,4 @@
 -- ERD-only schema for Liam ERD
--- DO NOT run in MySQL
 
 CREATE TABLE users (
   id INT NOT NULL,
