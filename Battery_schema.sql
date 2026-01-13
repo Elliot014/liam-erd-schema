@@ -4,7 +4,7 @@
 CREATE TABLE battery_pack (
   pack_id INT,
   pack_code VARCHAR(64),
-  chemistry VARCHAR(64),     -- e.g., NMC, LFP
+  chemistry VARCHAR(64),     -- NMC, LFP
   nominal_capacity_ah FLOAT, -- rated capacity
   nominal_voltage_v FLOAT,
   note TEXT,
