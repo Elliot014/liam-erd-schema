@@ -141,3 +141,17 @@ CREATE TABLE prediction (
   FOREIGN KEY (cycle_id) REFERENCES cycle(cycle_id),
   FOREIGN KEY (point_id) REFERENCES timeseries_point(point_id)
 );
+
+-- Heat data update--
+CREATE TABLE battery_thermal_ts (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  run_id VARCHAR(64) NOT NULL,
+  ts_ms BIGINT NOT NULL,
+  current_a FLOAT,
+  voltage_v FLOAT,
+  soc FLOAT,
+  temp_cell_c FLOAT,
+  temp_ambient_c FLOAT,
+  temp_rise_rate FLOAT,
+  INDEX idx_run_ts (run_id, ts_ms)
+);
