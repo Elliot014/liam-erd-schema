@@ -2,6 +2,7 @@
 -- Liam ERD Schema (ERD-only, parser-friendly)
 -- Purpose: SOC / SOH data platform conceptual model
 -- Note: This version is for ERD & documentation ONLY
+-- liambx.com/erd/p/
 -- ============================================================
 
 -- 1) Asset Layer: Battery Pack / Cell
